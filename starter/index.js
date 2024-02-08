@@ -89,3 +89,9 @@ var finances = [
 
 //count the number of entries because there is a month for every entry
 let numberMonths = finances.length;
+
+//calculate the net total amount of profit/losses over the entire period
+let netTotal =  0; //initialize variable to hold the total
+for (let i = 0; i < finances.length; i++) { //iterate through the finances dataset
+  netTotal += finances[i][1]; //add the second element, i.e., the profit/loss, of each finance element to the running total
+}
