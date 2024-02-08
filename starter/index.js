@@ -100,3 +100,9 @@ for (let i = 0; i < finances.length; i++) { //iterate through the finances datas
 let totalChanges = finances[(finances.length - 1)][1] - finances[0][1];
 //calculate the average of the changes
 let averageChange = totalChanges / (numberMonths - 1);
+
+//find the changes in profit/losses over the months
+let changes = []; //create an empty array to hold change values
+for (let i = 1; i < finances.length; i++) {
+  changes[i] = finances[i][1] - finances[i-1][1]; //calculate difference and assign value to array
+}
