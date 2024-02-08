@@ -106,3 +106,6 @@ let changes = []; //create an empty array to hold change values
 for (let i = 1; i < finances.length; i++) {
   changes[i] = finances[i][1] - finances[i-1][1]; //calculate difference and assign value to array
 }
+//find the greatest increase in Profit/Losses over the entire period
+let maxChange = Math.max(...changes); //find the max change in the changes array with the Math.max function
+let maxMonth = finances[changes.indexOf(maxChange)][0]; //find the corresponding month with the index of changes, which matches to the finances array
