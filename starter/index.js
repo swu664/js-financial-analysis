@@ -97,4 +97,6 @@ for (let i = 0; i < finances.length; i++) { //iterate through the finances datas
 }
 
 //determine the total changes in the profit/losses, which is the differnce between the first and last months
-let totalChanges = finances[(finances.length - 1)][1] - finances[0][1]
+let totalChanges = finances[(finances.length - 1)][1] - finances[0][1];
+//calculate the average of the changes
+let averageChange = totalChanges / (numberMonths - 1);
