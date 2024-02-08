@@ -86,3 +86,6 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+//count the number of entries because there is a month for every entry
+let numberMonths = finances.length;
