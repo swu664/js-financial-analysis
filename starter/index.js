@@ -90,22 +90,26 @@ var finances = [
 //count the number of entries because there is a month for every entry
 let numberMonths = finances.length;
 
+
 //calculate the net total amount of profit/losses over the entire period
 let netTotal =  0; //initialize variable to hold the total
 for (let i = 0; i < finances.length; i++) { //iterate through the finances dataset
   netTotal += finances[i][1]; //add the second element, i.e., the profit/loss, of each finance element to the running total
 }
 
+
 //determine the total changes in the profit/losses, which is the differnce between the first and last months
 let totalChanges = finances[(finances.length - 1)][1] - finances[0][1];
 //calculate the average of the changes
 let averageChange = totalChanges / (numberMonths - 1);
+
 
 //find the changes in profit/losses over the months
 let changes = []; //create an empty array to hold change values
 for (let i = 1; i < finances.length; i++) {
   changes[i] = finances[i][1] - finances[i-1][1]; //calculate difference and assign value to array
 }
+
 //find the greatest increase in Profit/Losses over the entire period
 let maxChange = Math.max(...changes); //find the max change in the changes array with the Math.max function
 let maxMonth = finances[changes.indexOf(maxChange)][0]; //find the corresponding month with the index of changes, which matches to the finances array
@@ -113,3 +117,13 @@ let maxMonth = finances[changes.indexOf(maxChange)][0]; //find the corresponding
 //find the greatest decrease in Profit/Losses over the entire period
 let minChange = Math.min(...changes); //find the min change in the changes array with the Math.min function
 let minMonth = finances[changes.indexOf(minChange)][0]; //find the corresponding month with the index of changes
+
+
+//print the analysis to the console
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + numberMonths);
+console.log("Total: $" + netTotal);
+console.log("Average Change: " + averageChange);
+console.log("Greatest Increase in Profits/Losses: " + maxMonth + " ($" + maxChange + ")");
+console.log("Greatest Decrease in Profits/Losses: " + minMonth + " ($" + minChange + ")");
