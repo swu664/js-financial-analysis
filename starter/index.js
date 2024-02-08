@@ -112,11 +112,11 @@ for (let i = 1; i < finances.length; i++) {
 
 //find the greatest increase in Profit/Losses over the entire period
 let maxChange = Math.max(...changes); //find the max change in the changes array with the Math.max function
-let maxMonth = finances[changes.indexOf(maxChange)][0]; //find the corresponding month with the index of changes, which matches to the finances array
+let maxMonth = finances[(changes.indexOf(maxChange)+1)][0]; //find the corresponding month with the index of changes, which matches to the finances array
 
 //find the greatest decrease in Profit/Losses over the entire period
 let minChange = Math.min(...changes); //find the min change in the changes array with the Math.min function
-let minMonth = finances[changes.indexOf(minChange)][0]; //find the corresponding month with the index of changes
+let minMonth = finances[(changes.indexOf(minChange)+1)][0]; //find the corresponding month with the index of changes
 
 
 //print the analysis to the console
