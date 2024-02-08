@@ -107,7 +107,7 @@ let averageChange = totalChanges / (numberMonths - 1);
 //find the changes in profit/losses over the months
 let changes = []; //create an empty array to hold change values
 for (let i = 1; i < finances.length; i++) {
-  changes[i] = finances[i][1] - finances[i-1][1]; //calculate difference and assign value to array
+  changes.push(finances[i][1] - finances[i-1][1]); //calculate difference and push value to array
 }
 
 //find the greatest increase in Profit/Losses over the entire period
