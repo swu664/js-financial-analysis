@@ -95,3 +95,6 @@ let netTotal =  0; //initialize variable to hold the total
 for (let i = 0; i < finances.length; i++) { //iterate through the finances dataset
   netTotal += finances[i][1]; //add the second element, i.e., the profit/loss, of each finance element to the running total
 }
+
+//determine the total changes in the profit/losses, which is the differnce between the first and last months
+let totalChanges = finances[(finances.length - 1)][1] - finances[0][1]
