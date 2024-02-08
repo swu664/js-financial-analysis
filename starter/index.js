@@ -127,3 +127,17 @@ console.log("Total: $" + netTotal);
 console.log("Average Change: " + averageChange.toFixed(2));
 console.log("Greatest Increase in Profits/Losses: " + maxMonth + " ($" + maxChange + ")");
 console.log("Greatest Decrease in Profits/Losses: " + minMonth + " ($" + minChange + ")");
+
+// Prepare the financial analysis content
+let analysisContent = `
+    <p>Financial Analysis</p>
+    <p>-------------------</p>
+    <p>Total Months: ${numberMonths}</p>
+    <p>Total: $${netTotal}</p>
+    <p>Average Change: ${averageChange.toFixed(2)}</p>
+    <p>Greatest Increase in Profits/Losses: ${maxMonth} ($${maxChange})</p>
+    <p>Greatest Decrease in Profits/Losses: ${minMonth} ($${minChange})</p>
+`;
+
+// Display the analysis on the web page
+document.getElementById('financial-analysis').innerHTML = analysisContent;
